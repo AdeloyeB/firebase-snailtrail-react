@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
-
+import firebase from "../firebase";
 //import withFirebase from '../database/with-firebase';
 
 import "./style.css";
@@ -9,7 +9,7 @@ const AddTask = props => {
     // add the fields to firebase
     // redirect the user to the homepage
     console.log(formValues);
-    window.db
+    firebase.db
       .collection("tasks")
       .doc(formValues.name)
       .set(formValues);

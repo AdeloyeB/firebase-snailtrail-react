@@ -6,6 +6,7 @@ import Register from "../Register";
 import Dashboard from "../Dashboard";
 import Geolocation from "../Geolocation";
 import AddTask from "../AddTask";
+import ViewTasks from "../ViewTasks";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { CssBaseline, CircularProgress } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -33,6 +34,7 @@ export default function App() {
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/geolocation" component={Geolocation} />
           <Route exact path="/addtask" component={AddTask} />
+          <Route exact path="/viewtasks" component={ViewTasks} />
         </Switch>
       </Router>
     </MuiThemeProvider>

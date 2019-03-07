@@ -3,12 +3,12 @@ import "firebase/auth";
 import "firebase/firebase-firestore";
 
 const config = {
-  apiKey: "AIzaSyAIv3F6_rAfkNX5nPcb2OcdzHgXvQ2pA5E",
-  authDomain: "react-native-snailtrail.firebaseapp.com",
-  databaseURL: "https://react-native-snailtrail.firebaseio.com",
-  projectId: "react-native-snailtrail",
-  storageBucket: "react-native-snailtrail.appspot.com",
-  messagingSenderId: "919642076469"
+  apiKey: "AIzaSyDZTZA5rQWg03XGvkq1XjIuT6w0EDJ1ZCA",
+  authDomain: "snail-trail-db0f1.firebaseapp.com",
+  databaseURL: "https://snail-trail-db0f1.firebaseio.com",
+  projectId: "snail-trail-db0f1",
+  storageBucket: "snail-trail-db0f1.appspot.com",
+  messagingSenderId: "490384132440"
 };
 
 class Firebase {
