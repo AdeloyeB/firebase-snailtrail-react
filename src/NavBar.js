@@ -14,10 +14,10 @@ const NavBar = props => {
               <NavLink to="/add-task">View Task</NavLink>
             </li>
             <li>
-              <NavLink to="/add-task">+Task</NavLink>
+              <NavLink to="/addtask">+Task</NavLink>
             </li>
             <li>
-              <NavLink to="/add-task">Map</NavLink>
+              <NavLink to="/geolocation">Map</NavLink>
             </li>
           </ul>
         </div>

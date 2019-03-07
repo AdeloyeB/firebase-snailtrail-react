@@ -10,7 +10,7 @@ import VerifiedUserOutlined from "@material-ui/icons/VerifiedUserOutlined";
 import withStyles from "@material-ui/core/styles/withStyles";
 import firebase from "../firebase";
 import { withRouter } from "react-router-dom";
-import NavBar from "../NavBar";
+import NavBar from "../../NavBar";
 
 const styles = theme => ({
   main: {
