@@ -16,7 +16,7 @@ https://trello.com/b/myfPu1ZI
 
 - [x] Login and Register at the start of the mobile app. Users will not be able to access the app without logging in. Moreover, information is hashed in a firebase database.
 
-- [x] Dashboard to view all the information from the raspbery pis about the co2 in the area.
+- [x] Website is accessible according to the Web Accessiblity Checker
 
 - [] RSS Feed of all the local news in the area, based on being green.
 
