@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
+import NavBar from "../../NavBar";
 import firebase from "../firebase";
 //import withFirebase from '../database/with-firebase';
 
@@ -17,6 +18,7 @@ const AddTask = props => {
 
   return (
     <div className="AddTask">
+      <NavBar />
       <h1>Add a Task</h1>
       <h1>My Form</h1>
       <Formik
