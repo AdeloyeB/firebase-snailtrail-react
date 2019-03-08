@@ -21,8 +21,8 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: `${theme.spacing.unit * 25}px ${theme.spacing.unit * 3}px ${theme
-      .spacing.unit * 25}px`
+    padding: `${theme.spacing.unit * 8}px ${theme.spacing.unit * 3}px ${theme
+      .spacing.unit * 8}px`
   },
   submit: {
     marginTop: theme.spacing.unit * 3
@@ -34,6 +34,11 @@ function HomePage(props) {
 
   return (
     <main className={classes.main}>
+      <Paper className={classes.paper}>
+        <Typography component="h1" variant="h5">
+          GreenLife Tracker
+        </Typography>
+      </Paper>
       <Paper className={classes.paper}>
         <Typography component="h1" variant="h5">
           Hello There!

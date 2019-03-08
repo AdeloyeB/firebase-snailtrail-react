@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./style.css";
+import { Typography, Paper, CircularProgress, Button } from "@material-ui/core";
 const TaskCardFunctionalFormat = props => {
   let [accepted, setAccepted] = useState(false);
   const { taskName, taskDescription } = props;
 
   return (
-    <article className="TaskCard">
+    <Paper className="TaskCard">
       {accepted && <span>You have accepted the task</span>}
       <h2>{taskName}</h2>
       <p>{taskDescription}</p>
@@ -19,7 +20,7 @@ const TaskCardFunctionalFormat = props => {
           value={accepted}
         />
       </p>
-    </article>
+    </Paper>
   );
 };
 

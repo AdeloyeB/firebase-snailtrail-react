@@ -28,6 +28,15 @@ https://trello.com/b/myfPu1ZI
 - [x] User data is stored in the firebase database
 - [x] Deploys automatically on a push to the master branch to live site.
 - [x] Deploys automatically on a push to the test branch to test site.
+- [x] Offline App - Write data offline
+
+If a client loses its network connection, your app will continue functioning correctly.
+
+Every client connected to a Firebase database maintains its own internal version of any active data. When data is written, it's written to this local version first. The Firebase client then synchronizes that data with the remote database servers and with other clients on a "best-effort" basis.
+
+As a result, all writes to the database trigger local events immediately, before any data is written to the server. This means your app remains responsive regardless of network latency or connectivity.
+
+Once connectivity is reestablished, your app receives the appropriate set of events so that the client syncs with the current server state, without having to write any custom code.
 
 # What I Have Used:
 

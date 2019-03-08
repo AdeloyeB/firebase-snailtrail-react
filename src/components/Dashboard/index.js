@@ -4,13 +4,15 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import firebase from "../firebase";
 import { withRouter } from "react-router-dom";
 import NavBar from "../../NavBar";
+import ButtonAppBar from "../../ButtonAppBar";
+import DashboardCard from "../DashboardCard";
 
 const styles = theme => ({
   main: {
     width: "auto",
     display: "block", // Fix IE 11 issue.
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
+    marginLeft: theme.spacing.unit * 2,
+    marginRight: theme.spacing.unit * 2,
     [theme.breakpoints.up(400 + theme.spacing.unit * 3 * 2)]: {
       width: 400,
       marginLeft: "auto",
@@ -50,27 +52,32 @@ function Dashboard(props) {
   });
 
   return (
-    <main className={classes.main}>
-      <NavBar />
-      <Paper className={classes.paper}>
-        <Typography component="h1" variant="h5">
-          Hello {firebase.getCurrentUsername()}
-        </Typography>
-        <Typography component="h1" variant="h5">
-          Your quote: {quote ? `"${quote}"` : <CircularProgress size={20} />}
-        </Typography>
-        <Button
-          type="submit"
-          fullWidth
-          variant="text"
-          color="default"
-          onClick={logout}
-          className={classes.submit}
-        >
-          Logout
-        </Button>
-      </Paper>
-    </main>
+    <div>
+      <ButtonAppBar />
+      <main className={classes.main}>
+        <Paper className={classes.paper}>
+          <Typography component="h1" variant="h5">
+            Hello {firebase.getCurrentUsername()}
+          </Typography>
+          <Typography component="h1" variant="h5">
+            Your quote: {quote ? `"${quote}"` : <CircularProgress size={20} />}
+          </Typography>
+          <Button
+            type="submit"
+            fullWidth
+            variant="text"
+            color="default"
+            onClick={logout}
+            className={classes.submit}
+          >
+            Logout
+          </Button>
+        </Paper>
+        <Paper>
+          <DashboardCard />
+        </Paper>
+      </main>
+    </div>
   );
 
   async function logout() {

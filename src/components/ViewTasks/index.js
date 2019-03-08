@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import TaskCardFunctionalFormat from "../TaskCards/TaskCardFunctionalFormat";
-import { CircularProgress } from "@material-ui/core";
-import NavBar from "../../NavBar";
+import { Typography, Paper, CircularProgress, Button } from "@material-ui/core";
+//import NavBar from "../../NavBar";
+import ButtonAppBar from "../../ButtonAppBar";
 import firebase from "../firebase";
 const ViewTasks = props => {
   const [tasks, setTasks] = useState(null);
@@ -24,9 +25,13 @@ const ViewTasks = props => {
 
   return (
     <div className="ViewTasks">
-      <NavBar />
+      <ButtonAppBar />
       <section>
-        <h1>Welcome to Task Tracker</h1>
+        <Paper>
+          <Typography component="h1" variant="h5">
+            Task Tracker
+          </Typography>
+        </Paper>
         {tasks &&
           tasks.map(task => (
             <TaskCardFunctionalFormat

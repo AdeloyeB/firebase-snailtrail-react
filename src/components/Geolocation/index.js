@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import "./styles.css";
 import Container from "react-bootstrap/Container";
-import NavBar from "../../NavBar";
+//import NavBar from "../../NavBar";
+import ButtonAppBar from "../../ButtonAppBar";
 import MapFooter from "../../MapFooter";
 export class Geolocation extends Component {
   state = {
@@ -37,7 +38,7 @@ export class Geolocation extends Component {
     console.log("center", center);
     return (
       <Container className="GMapsContainer">
-        <NavBar />
+        <ButtonAppBar />
         {!center && <p>Loading</p>}
         {center.lat && (
           <div style={{ height: "100vh", width: "100%" }}>
